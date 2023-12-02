@@ -1,8 +1,9 @@
 from django.shortcuts import render
 import requests
-from .models import City
+from .models import City, WeatherInfo
 from .forms import CityForm
 from datetime import date
+from .serializers import WeatherSerializer
 
 
 def index(request):
@@ -24,13 +25,10 @@ def index(request):
             'city' : city,
             'temperature' : city_weather['main']['temp'],
             'description' : city_weather['weather'][0]['description'],
-            'icon' : city_weather['weather'][0]['icon'],
             'date' : date.today()
         }
         weather_data = []  
         weather_data.append(weather) #add the data for the current city into our list
-
-    context = {'weather_data' : weather_data, 'form' : form}
-     
-    #print(city_weather) #temporarily view output
+    serializer = WeatherSerializer(weather)
+    context = {'weather_data' : [serializer.data], 'form' : form}
     return render(request, 'weather/weather.html', context) #returns the weather.html template

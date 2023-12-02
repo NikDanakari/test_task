@@ -1,0 +1,7 @@
+django==4.2.7
+djangorestframework==3.14.0
+psutil==5.9.6
+django-rest-framework==0.1.0
+openapi==1.1.0
+django-rest-swagger==2.2.0
+drf-yasg==1.21.7

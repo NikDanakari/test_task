@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ma+ivw0s$&lle48nkjz7i7pb0b=#7ivr1fuv4hmlil+wp1i%xc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'docs',
     'rest_framework_swagger',       # Swagger 
     'rest_framework',               # Django rest framework
-    'drf_yasg'                      # Yet Another Swagger generator
+    'drf_yasg',                      # Yet Another Swagger generator
+    'ram',
 ]
 
 MIDDLEWARE = [

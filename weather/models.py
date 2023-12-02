@@ -8,3 +8,9 @@ class City(models.Model):
 
     class Meta: #show the plural of city as cities instead of citys
         verbose_name_plural = 'cities'
+
+class WeatherInfo(models.Model):
+    city = models.CharField(max_length=50)
+    temperature = models.CharField(max_length=20)
+    description = models.CharField(max_length=100)
+    date = models.CharField(max_length=20)
