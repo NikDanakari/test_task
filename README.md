@@ -1,6 +1,6 @@
 # test_task
 This is a test project in django. This app allows to check current weather in direct city and avaliable RAM on local machine.
-To run this project you need Python 3.10.13 and following packages in venv
+To run this project you need Python 3.10.13, Docker 24.0.7 and following packages in venv
 ```shell
 pip3 install django==4.2.7
 pip3 install djangorestframework==3.14.0
